@@ -1,22 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 import React  , {useState} from 'react';
 
 const App = () => {
-  const newTime = new Date().toLocaleTimeString();
+  let Time = new Date().toLocaleTimeString();
 
-  const [cTime , setCtime] = useState(newTime);
+  const [ctime, setCtime] = useState(Time);
 
   const UpdateTime = () => {
-    let newCTime = new Date().toLocaleTimeString();
-    setCtime(newCTime);
+    Time = new Date().toLocaleTimeString();
+    setCtime(Time);
   };
 
-  setInterwal(UpdateTime , 1000);
+  setInterval(UpdateTime,1000);
 
   return (
     <>
-    <h1>{cTime}</h1>
+    <h1>{ctime}</h1>
     </>
   );
 }
